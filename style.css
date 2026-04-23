@@ -1,0 +1,189 @@
+:root {
+  --amazon-dark: #131921;
+  --amazon-mid: #232f3e;
+  --amazon-accent: #febd69;
+  --amazon-accent-2: #ff9900;
+  --page-bg: #e3e6e6;
+  --text-main: #111;
+  --text-soft: #565959;
+  --card-radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #f3f4f4 0%, var(--page-bg) 100%);
+  color: var(--text-main);
+}
+
+.topbar {
+  background: var(--amazon-dark);
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-secondary {
+  background: var(--amazon-mid);
+  position: relative;
+  z-index: 999;
+}
+
+.brand-badge {
+  background: linear-gradient(135deg, var(--amazon-accent) 0%, var(--amazon-accent-2) 100%);
+  color: #111;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: .35rem .8rem;
+  letter-spacing: .3px;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.2));
+}
+
+.search-box .form-control {
+  border: 0;
+  box-shadow: none;
+}
+
+.search-box .btn {
+  background: var(--amazon-accent);
+  border: 0;
+}
+
+.hero-wrap {
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-carousel .carousel-item {
+  height: 460px;
+  background: #ddd center/cover no-repeat;
+  margin-top: 0;
+  padding-top: 80px;
+}
+
+.hero-carousel .carousel-caption {
+  left: 50%;
+  right: auto;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 560px;
+  margin-left: 0;
+  background: rgba(17, 17, 17, .55);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+.hero-carousel .carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.12));
+}
+
+.hero-carousel .carousel-item > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+
+.section-subtitle {
+  color: var(--text-soft);
+}
+
+.category-card,
+.deal-card {
+  border: 0;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  height: 100%;
+}
+
+.category-card:hover,
+.deal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0,0,0,.12);
+}
+
+.category-image {
+  height: 180px;
+  object-fit: cover;
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.deal-image {
+  height: 240px;
+  object-fit: cover;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #b12704;
+}
+
+.rating i {
+  color: #f0c14b;
+}
+
+.promo-band {
+  background: linear-gradient(135deg, #fff 0%, #f9efe2 100%);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.promo-band img {
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,.15)) brightness(1.02);
+  transform: rotate(-1deg);
+}
+
+footer {
+  background: var(--amazon-mid);
+  color: #ddd;
+}
+
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Combinador 1: filho direto */
+.feature-list > li {
+  margin-bottom: .45rem;
+}
+
+/* Combinador 2: irmão adjacente */
+.promo-band h2 + p {
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+/* Combinador 3: descendente */
+.footer-links a {
+  display: block;
+  margin-bottom: .45rem;
+}
+
+/* Combinador 4: irmão geral */
+.deal-card .price ~ small {
+  color: var(--text-soft);
+}
+
+.small-note {
+  font-size: .9rem;
+  color: #6c757d;
+}
