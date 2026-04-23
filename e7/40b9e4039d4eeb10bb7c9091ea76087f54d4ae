@@ -1,0 +1,23 @@
+index.html
+  78de905f5a000616 269
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "e740b9e4039d4eeb10bb7c9091ea76087f54d4ae",
+  "prompts": {
+    "78de905f5a000616": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "1691a917-fbf1-43ba-8329-75d941af2ddd",
+        "model": "unknown"
+      },
+      "human_author": "DanTheBrazuca",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 296,
+      "overriden_lines": 0
+    }
+  }
+}
